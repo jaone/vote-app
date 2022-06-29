@@ -1,0 +1,73 @@
+.votebox {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  border:1px solid transparent;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &:hover{
+    background: #ebeaea;
+    border-color:#c2c1c1;
+    .delete {
+      display: block;
+    }
+    .pointbox {
+      background: #a5a5a5;
+    }
+  } 
+
+  .delete {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    right: -5px;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+    background: #ff0000;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    filter: drop-shadow(2px 4px 10px #000);
+  }
+
+  .pointbox {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+    background: #c2c2c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-right: 20px;
+
+    .number {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    .link {
+      font-size: 10px;
+      color: #ddd;
+    }
+  }
+  .vote {
+    font-size: 12px;
+    color: #ddd;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .up {}
+    .down {}
+  }
+}

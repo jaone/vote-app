@@ -1,0 +1,44 @@
+.submitButton {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  border:1px solid transparent;
+  background: #ebeaea;
+  border-color:#c2c1c1;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &:hover{
+  
+    .pointbox {
+      
+    }
+  } 
+
+  .pointbox {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+    background: #a5a5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-right: 20px;
+
+    .number {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  .title {
+    font-size: 75px;
+    font-weight: bold;
+  }
+}
